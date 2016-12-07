@@ -86,33 +86,33 @@ namespace quiz1
             {
                 for (int j = 0; j < 6; j++)
                 {
-                    if (i == 0 && j >= 2)
+                    if ((i == 0 && j >= 2)|| (i == 1 && (j == 1 || j == 4)) || (i == 2 && j <= 3))
                     {
-                        Console.Write("*");
+                        Console.Write("* ");
 
                     }
                     else
                     {
-                        Console.Write(" ");
+                        Console.Write("  ");
                     }
-                    if (i == 1 && (j == 1 || j == 4))
-                    {
-                        Console.Write("*");
+                    //if (i == 1 && (j == 1 || j == 4))
+                    //{
+                    //    Console.Write("*");
 
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
-                    if (i == 2 && j <= 3)
-                    {
-                        Console.Write("*");
+                    //}
+                    //else
+                    //{
+                    //    Console.Write(" ");
+                    //}
+                    //if (i == 2 && j <= 3)
+                    //{
+                    //    Console.Write("*");
 
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
+                    //}
+                    //else
+                    //{
+                    //    Console.Write(" ");
+                    //}
                 }
                 Console.WriteLine();
             }

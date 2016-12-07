@@ -78,17 +78,54 @@ namespace Array
             //Console.WriteLine("{0} tane negatif var ", negatif);
             //Console.WriteLine("{0} tane sıfır var ", sifir);
 
-            string[] gunler = new string[] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+            //string[] gunler = new string[] { "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+            //bool devam = true;
+            //while (devam)
+            //{
 
-            Console.WriteLine("Haftanın kaçıncı günü :?");
-            int sira = Convert.ToInt16(Console.ReadLine());
 
-            foreach (var gun in gunler)
+            //    Console.WriteLine("Haftanın kaçıncı günü :?");
+            //    int sira = Convert.ToInt16(Console.ReadLine());
+
+            //    if (sira <= 7 && sira >= 1)
+            //    {
+            //        Console.WriteLine(gunler[sira - 1]);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("gecersiz");
+            //    }
+            //    Console.WriteLine("devam ? :(e)");
+            //    char c = Convert.ToChar(Console.ReadLine());
+            //    if (c == 'e')
+            //    {
+            //        devam = true;
+            //        Console.Clear();
+            //    }
+            //    else
+            //    {
+            //        devam = false;
+            //    }
+            //}
+
+            //int[,] sinavlar = new int[2, 3];
+
+            //sinavlar[0, 0] = 1;
+            //sinavlar[1, 0] = 20;
+            //sinavlar[0, 1] = 2;
+            //sinavlar[1, 1] = 40;
+            //sinavlar[0, 2] = 3;
+            //sinavlar[1, 2] = 60;
+            //for (int i = 0; i <3; i++)
+
+            //{
+            //    Console.WriteLine(sinavlar[0, i] + "-" + sinavlar[1, i]);
+            //}
+            int i = 0;
+            do
             {
-                Console.WriteLine(gun);
-            }
-           
-
+                Console.WriteLine("yaz");
+            } while (i!=0);
         }
     }
 }
