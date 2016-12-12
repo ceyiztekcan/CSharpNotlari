@@ -55,6 +55,8 @@ namespace UzayYolu
             if ((SpaceX>genislik-SpaceShip.Width||SpaceX<=0)||(SpaceY>yukseklik-SpaceShip.Height*2||SpaceY<=0))
             {
                 MessageBox.Show("Oyun Bitti");
+                SpaceShip.Location = new Point(10, 10);
+                Application.Exit();
             }
 
         }
