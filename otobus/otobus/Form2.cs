@@ -15,24 +15,33 @@ namespace otobus
         public Form2()
         {
             InitializeComponent();
-            
+
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    yolcular.Add("bos");
+
+            //}
         }
-       public List<string> yolcular = new List<string>();
+        string[]yolcular = new string[50];
         
-        public string kayit;
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            //yolcular[int.Parse(kayit)].Insert(1, textBox1.Text);
-            
-        }
+        public int kayit;
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             
-            Form form1 = new Form1();
-    
-            //form1.Show();
-            this.Hide();
+            
+            yolcular[(kayit - 1)] += textBox1.Text;
+            textBox2.Text =  "koltuk : " + kayit.ToString()+ yolcular[kayit-1];
+
+           Form form1 = new Form1();
+           
+           this.Hide();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = "bos";
         }
     }
 }

@@ -17,6 +17,7 @@ namespace otobus
             InitializeComponent();
         }
        public int sayac = 1;
+        public string sec;
         public List<int> koltukNo = new List<int>();
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -25,13 +26,13 @@ namespace otobus
         private void Btn_click(object sender, EventArgs e)
         {
 
-            Button btn = sender as Button;
-            btn.BackColor = Color.Red;
-            btn.Text = sayac.ToString();
-            Form2 form2 = new Form2();
-            form2.kayit = sayac.ToString();
-            form2.Show();
+            Button secilenbtn = sender as Button;
+            secilenbtn.BackColor = Color.Red;
             
+            Form2 form2 = new Form2();
+            form2.kayit = int.Parse(secilenbtn.Text);
+            form2.Show();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace otobus
                             this.Controls.Add(btn);
                             koltukNo.Add(sayac);
                             btn.Click += Btn_click;
+                            btn.BackColorChanged += Btn_BackColorChanged;
 
                             sayac++;
 
@@ -105,5 +107,10 @@ namespace otobus
 
         }
 
+        private void Btn_BackColorChanged(object sender, EventArgs e)
+        {
+            Button renklibtn = sender as Button;
+            
+        }
     }
 }

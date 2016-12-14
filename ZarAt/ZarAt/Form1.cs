@@ -16,7 +16,7 @@ namespace ZarAt
         {
             InitializeComponent();
         }
-
+        int sayac = 1;
         private void Zar ()
         {
           Random rnd = new Random();
@@ -28,16 +28,19 @@ namespace ZarAt
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            sayac = 1;
             timer1.Start();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            sayac = 1;
             timer1.Start();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            sayac = 1;
             timer1.Start();
         }
 
@@ -51,15 +54,20 @@ namespace ZarAt
         private void timer1_Tick(object sender, EventArgs e)
         {
             
-            int sayac = 1;
+           
             if (sayac<10)
             {
                 Zar();
             }
+            else
+            {
+                timer1.Stop();
+            }
             sayac++;
 
-            timer1.Stop();
+            
         }
+        
     }
   
 }
