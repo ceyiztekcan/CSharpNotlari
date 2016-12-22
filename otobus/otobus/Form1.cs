@@ -16,7 +16,8 @@ namespace otobus
         {
             InitializeComponent();
         }
-       public int sayac = 1;
+
+        public int sayac = 1;
         public string sec;
         public List<int> koltukNo = new List<int>();
         private void Form1_Load(object sender, EventArgs e)

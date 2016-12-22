@@ -22,15 +22,13 @@ namespace otobus
 
             //}
         }
-        string[]yolcular = new string[50];
+        public static string[] yolcular = new string[50];
         
         public int kayit;
         
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
             yolcular[(kayit - 1)] += textBox1.Text;
             textBox2.Text =  "koltuk : " + kayit.ToString()+ yolcular[kayit-1];
 
@@ -41,7 +39,7 @@ namespace otobus
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "bos";
+            //textBox1.Text = "bos";
         }
     }
 }
