@@ -13,6 +13,8 @@ namespace IZSU_OOP
         public int OncekiSayac;
         public int SonSayac;
         public string AboneTuru;
+        public double guncelBorc;
+        public double toplamBorc;
 
         public double OdemeHesapla(double onceki, double son, string aboneTuru)
         {

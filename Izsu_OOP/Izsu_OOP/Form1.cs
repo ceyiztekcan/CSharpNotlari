@@ -16,23 +16,31 @@ namespace IZSU_OOP
         {
             InitializeComponent();
         }
-
+       
         private void button1_Click(object sender, EventArgs e)
         {
             Abone _abone = new Abone();
+            List<Abone> aboneListesi = new List<Abone>();
             _abone.AboneNo = TxtAboneNo.Text;
             _abone.AdSoyad = TxtAdSoyad.Text;
             _abone.OncekiSayac = int.Parse(TxtOncekiSayac.Text);
             _abone.SonSayac = int.Parse(TxtSonSayac.Text);
 
             string aboneTuru = RadioBtnEv.Checked == true ? "Ev" : "Kurum";
-            aboneTuru = RadioBtnKurum.Checked == true ? "Kurum" : "Ev";
+            //aboneTuru = RadioBtnKurum.Checked == true ? "Kurum" : "Ev";
             _abone.AboneTuru = aboneTuru;
-            if (_abone.AboneNo!=ListBoxAboneler.Contains.)
-            {
+            
+            bool var;
+            var = aboneListesi.Contains(_abone);
 
+
+            if (!var)
+            {
+                ListBoxAboneler.Items.Add(_abone);
             }
-            ListBoxAboneler.Items.Add(_abone);
+            aboneListesi.Add(_abone);          
+
+
         }
 
         private void ListBoxOdenecekler_DoubleClick(object sender, EventArgs e)

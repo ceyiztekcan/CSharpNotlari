@@ -12,15 +12,13 @@ namespace IZSU_OOP
 {
     public partial class Form3 : Form
     {
-        public double gBorc;
+          
         public Form3(Abone aboneForm3)
         {
             InitializeComponent();
             TxtBAdSoyad.Text = aboneForm3.AdSoyad;
-            TxtBSonOdenen.Text = gBorc.ToString();
-            double toplamBorc=0 ;
-            toplamBorc += gBorc;
-            TxtBToplamOdeme.Text = toplamBorc.ToString();
+            TxtBSonOdenen.Text = aboneForm3.guncelBorc.ToString();
+            TxtBToplamOdeme.Text = aboneForm3.toplamBorc.ToString();
              
         }
     }
