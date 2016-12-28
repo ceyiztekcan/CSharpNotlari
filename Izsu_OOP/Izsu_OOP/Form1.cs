@@ -18,10 +18,11 @@ namespace IZSU_OOP
         }
         bool var = false;
         int index = 1;
+        List<string> aboneNoListesi = new List<string>();
         private void button1_Click(object sender, EventArgs e)
         {
             Abone _abone = new Abone();
-            List<Abone> aboneListesi = new List<Abone>();
+           
             _abone.AboneNo = TxtAboneNo.Text;
             _abone.AdSoyad = TxtAdSoyad.Text;
             _abone.OncekiSayac = int.Parse(TxtOncekiSayac.Text);
@@ -30,24 +31,29 @@ namespace IZSU_OOP
             string aboneTuru = RadioBtnEv.Checked == true ? "Ev" : "Kurum";
             //aboneTuru = RadioBtnKurum.Checked == true ? "Kurum" : "Ev";
             _abone.AboneTuru = aboneTuru;
-            aboneListesi.Add(_abone);
-            
 
-            do
+            if (aboneNoListesi.Contains(_abone.AboneNo) == false)
             {
-                Abone abone = (Abone)ListBoxAboneler.SelectedItem;
-                if (!var)
-            {
-                   
-                    ListBoxAboneler.Items.Add(_abone);
+                aboneNoListesi.Add(_abone.AboneNo);
+                ListBoxAboneler.Items.Add(_abone);
             }
-                else
-                {
-                    break;
-                }
-                var = aboneListesi.Contains(_abone);
-                index++;
-            } while (index<aboneListesi.Count);
+            
+            
+            //do
+            //{
+            //    //Abone abone = (Abone)ListBoxAboneler.SelectedItem;
+            //    if (!var)
+            //{
+                   
+            //        ListBoxAboneler.Items.Add(_abone);
+            //}
+            //    //else
+            //    //{
+            //    //    break;
+            //    //}
+            //    var = aboneListesi.Contains(_abone);
+            //    index++;
+            //} while (index<aboneListesi.Count);
             
 
 
