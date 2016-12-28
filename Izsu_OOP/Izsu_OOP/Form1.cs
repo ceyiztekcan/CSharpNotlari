@@ -16,7 +16,8 @@ namespace IZSU_OOP
         {
             InitializeComponent();
         }
-       
+        bool var = false;
+        int index = 1;
         private void button1_Click(object sender, EventArgs e)
         {
             Abone _abone = new Abone();
@@ -29,16 +30,27 @@ namespace IZSU_OOP
             string aboneTuru = RadioBtnEv.Checked == true ? "Ev" : "Kurum";
             //aboneTuru = RadioBtnKurum.Checked == true ? "Kurum" : "Ev";
             _abone.AboneTuru = aboneTuru;
+            aboneListesi.Add(_abone);
             
-            bool var;
-            var = aboneListesi.Contains(_abone);
 
-
-            if (!var)
+            do
             {
-                ListBoxAboneler.Items.Add(_abone);
+                Abone abone = (Abone)ListBoxAboneler.SelectedItem;
+                if (!var)
+            {
+                   
+                    ListBoxAboneler.Items.Add(_abone);
             }
-            aboneListesi.Add(_abone);          
+                else
+                {
+                    break;
+                }
+                var = aboneListesi.Contains(_abone);
+                index++;
+            } while (index<aboneListesi.Count);
+            
+
+
 
 
         }
