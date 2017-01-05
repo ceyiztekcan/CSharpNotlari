@@ -16,16 +16,18 @@ namespace KentKart_OOP
         public Form2(Kart yolcu)
         {
             InitializeComponent();
+            if (yolcu!=null)
+            {
+                gelenYolcu = yolcu;
+
+            }
 
         }
-        if ()
-	{
-
-	}
+   
 private void BtnYukle_Click(object sender, EventArgs e)
         {
             gelenYolcu.bakiye += int.Parse(TxtBakiye.Text);
-            Form1 frm1 = new Form1();
+            Form1 frm1 = new Form1(gelenYolcu);
             frm1.Show();
             this.Hide();
         }
