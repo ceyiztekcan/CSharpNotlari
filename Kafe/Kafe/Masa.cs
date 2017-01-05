@@ -17,6 +17,7 @@ namespace Kafe
         {
             siparisList = new List<Siparis>();
         }
+       
     }
 }
 

@@ -18,6 +18,7 @@ namespace Kafe
         }
 
         Masa m = new Masa();
+        Siparis s = new Siparis();
         Masa[] masalar = new Masa[15];
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -129,7 +130,8 @@ namespace Kafe
 
         private void BtnOde_Click(object sender, EventArgs e)
         {
-
+            s.OdemeHesapla( s.adet,s.fiyat, s.odemeTuru);
+           
         }
     }
 }
